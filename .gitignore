@@ -1,0 +1,44 @@
+# --- Intel Quartus Prime ---
+/db/
+/incremental_db/
+/simulation/
+/output_files/
+/greybox_tmp/
+/ram_init_file/
+/sld_db/
+/timing/
+/qdb/
+/partition_qdb/
+
+*.rpt
+*.chg
+*.log
+*.bak
+*.smsg
+*.done
+*.jdi
+*.pin
+*.qws
+*.map
+*.sld
+*.supl
+*.eqn
+*.pof
+*.sof
+*.ttf
+*.rbf
+*.jam
+*.jic
+
+# --- ModelSim / QuestaSim ---
+/work/
+/_info
+transcript
+vsim.wlf
+*.wlf
+*.vstf
+modelsim.ini
+
+# OS generated files
+.DS_Store
+Thumbs.db
