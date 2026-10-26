@@ -1,7 +1,6 @@
 # --- Intel Quartus Prime ---
 /db/
 /incremental_db/
-/simulation/
 /output_files/
 /greybox_tmp/
 /ram_init_file/
