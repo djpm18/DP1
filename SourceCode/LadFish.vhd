@@ -14,7 +14,7 @@ Entity Adder is
 End Entity Adder;
 
 
-architecture LadFisher of Adder is
+architecture LadFish of Adder is
 
     -- Declare generate and propagate signals
     signal p_bit : std_logic_vector(N-1 downto 0);
@@ -125,4 +125,4 @@ begin
 
     end generate recur;
 
-end architecture LadFisher;
+end architecture LadFish;
