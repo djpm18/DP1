@@ -4,6 +4,14 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
+Entity Adder is
+	Generic ( N : natural := 64 );
+	Port ( A, B : in std_logic_vector( N-1 downto 0 );
+	 S : out std_logic_vector( N-1 downto 0 );
+	 Cin : in std_logic;
+	 Cout, Ovfl : out std_logic );
+End Entity Adder;
+	
 architecture CarrySelect of Adder is
 
     -- Four 16-bit blocks for a 64-bit adder
