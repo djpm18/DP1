@@ -251,3 +251,11 @@ configuration ConfigLadFish of TB_Adder is
     end for;
 end configuration ConfigLadFish;
 
+-- Brent-Kung Adder
+configuration ConfigBrentKung of TB_Adder is
+    for behaviour
+        for DUT : Adder
+            use entity work.Adder(BrentKung);
+        end for;
+    end for;
+end configuration ConfigBrentKung;
