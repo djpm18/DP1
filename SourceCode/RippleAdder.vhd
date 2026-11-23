@@ -43,21 +43,3 @@ begin
 	Ovfl <= c(N) xor c(N-1);
 
 end architecture Baseline;
-
-architecture FastRipple of Adder is
-
-signal A_ext, B_ext, sum_ext : unsigned(N downto 0);
-
-begin
-
--- Padding inputs A and B with '0' to account for overflow/Cout
-	A_ext <= '0' & unsigned(A);
-	B_ext <= '0' & unsigned(B); 	
-	sum_ext <= A_ext + B_ext + ('0' & Cin); -- Sum now adding 65-bit unsigned numbers
-	
-	S <= std_logic_vector(sum_ext(N-1 downto 0));
-	Cout <= std_logic(sum_ext(N)); -- Top bit is the Cout bit
-	
-	Ovfl <= (A(N-1) AND B(N-1) AND (NOT sum_ext(N-1))) OR ((NOT A(N-1)) AND (NOT B(N-1)) AND sum_ext(N-1));
-
-end architecture FastRipple;
