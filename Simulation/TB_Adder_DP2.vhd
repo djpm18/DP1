@@ -233,6 +233,15 @@ configuration ConfigCarryLookahead of TB_Adder is
     end for;
 end configuration ConfigCarryLookahead;
 
+-- Block Carry Lookahead Adder
+configuration ConfigBlockCarryLookahead of TB_Adder is
+    for behaviour
+        for DUT : Adder
+            use entity work.Adder(BlockCarryLookahead);
+        end for;
+    end for;
+end configuration ConfigBlockCarryLookahead;
+
 -- Ladner Fischer Adder
 configuration ConfigLadFish of TB_Adder is
     for behaviour
